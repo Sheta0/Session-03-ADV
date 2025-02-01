@@ -9,11 +9,11 @@ namespace Assignment_03
     public delegate string BookDelegate(Book B);
     public class LibraryEngine
     {
-        public static void ProcessBooks (List<Book> books, BookDelegate fPtr)
+        public static void ProcessBooks (List<Book> bList, /*BookDelegate*/ Func<Book, string> fPtr)
         {
-            foreach (Book book in books)
+            foreach (Book b in bList)
             {
-                Console.WriteLine(fPtr(book));
+                Console.WriteLine(fPtr(b));
             }
         }
     }
